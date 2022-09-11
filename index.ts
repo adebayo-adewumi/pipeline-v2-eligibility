@@ -17,8 +17,8 @@ app.use(limiter);
 
 app.get("/howold", (req: Request, res: Response) => {
     let queryParams :any = req.query; 
-    let regexWithSlash = /^([0-2]\d|(3)[0-1])(\/)(((0)\d)|((1)[0-2]))(\/)\d{4}$/i;
-    let regexWithHyphen = /^([0-2]\d|(3)[0-1])(-)(((0)\d)|((1)[0-2]))(-)\d{4}$/i;
+    let regexWithSlash = /^([0-2]\d|(3)[0-1])(\/)(((0)\d)|((1)[0-2]))(\/)\d{4}$/g;
+    let regexWithHyphen = /^([0-2]\d|(3)[0-1])(-)(((0)\d)|((1)[0-2]))(-)\d{4}$/g;
 
    
     if(!queryParams.hasOwnProperty("dob") ){
