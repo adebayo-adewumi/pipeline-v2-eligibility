@@ -1,4 +1,5 @@
 # Backend Assessment
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/f31768bd422a4de0a5ea87216f654dec)](https://www.codacy.com/gh/adebayo-adewumi/pipeline-v2-eligibility/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=adebayo-adewumi/pipeline-v2-eligibility&amp;utm_campaign=Badge_Grade)
 
 Build and deploy a very simple API that does the following
 
