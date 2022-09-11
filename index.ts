@@ -5,9 +5,9 @@ import { rateLimit } from "express-rate-limit";
 dotenv.config();
 
 const app: Express = express();
-const port = process.env.PORT;
+const port :any = process.env.PORT;
 
-const limiter = rateLimit({
+const limiter: any = rateLimit({
   max: 300,
   windowMs: 24 * 60 * 60 * 1000,
   message: "Too many request from this IP"
@@ -17,8 +17,8 @@ app.use(limiter);
 
 app.get("/howold", (req: Request, res: Response) => {
     let queryParams :any = req.query; 
-    let regexWithSlash = /^([0-2]\d|(3)[0-1])(\/)(((0)\d)|((1)[0-2]))(\/)\d{4}$/g;
-    let regexWithHyphen = /^([0-2]\d|(3)[0-1])(-)(((0)\d)|((1)[0-2]))(-)\d{4}$/g;
+    let regexWithSlash :any = /^([0-2]\d|(3)[0-1])(\/)(((0)\d)|((1)[0-2]))(\/)\d{4}$/g;
+    let regexWithHyphen :any = /^([0-2]\d|(3)[0-1])(-)(((0)\d)|((1)[0-2]))(-)\d{4}$/g;
 
    
     if(!queryParams.hasOwnProperty("dob") ){
@@ -35,8 +35,8 @@ app.get("/howold", (req: Request, res: Response) => {
       });
     }
 
-    let dateOfBirth = new Date(queryParams.dob);
-    let age = new Date().getFullYear() - dateOfBirth.getFullYear();
+    let dateOfBirth :any = new Date(queryParams.dob);
+    let age :any = new Date().getFullYear() - dateOfBirth.getFullYear();
 
     res.status(200).json({
       status: "success",
