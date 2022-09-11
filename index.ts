@@ -1,7 +1,6 @@
 import express, { Express, Request, Response } from 'express';
 import dotenv from 'dotenv';
 import { rateLimit } from "express-rate-limit";
-import { isTimestamp } from "validate.io-timestamp";
 
 dotenv.config();
 
