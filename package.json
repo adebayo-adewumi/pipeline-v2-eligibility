@@ -2,7 +2,7 @@
   "name": "pipeline-v2-eligibility",
   "version": "1.0.0",
   "description": "Build and deploy a very simple API that does the following",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "build": "npx tsc",
     "start": "node dist/index.js",
