@@ -8,8 +8,8 @@ const app: Express = express();
 const port :any = process.env.PORT;
 
 const limiter: any = rateLimit({
-  max: 300,
-  windowMs: 24 * 60 * 60 * 1000,
+  max: 3,
+  windowMs: 1000,
   message: "Too many request from this IP"
 });
 
